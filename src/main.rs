@@ -5,9 +5,5 @@ fn main() {
 }
 
 fn process_data(data: &[String]) -> Vec<String> {
-    let mut result = Vec::new();
-    for item in data {
-        result.push(item.clone()); // Unnecessary clone
-    }
-    result
+    data.iter().map(|s| s.to_string()).collect()
 }
