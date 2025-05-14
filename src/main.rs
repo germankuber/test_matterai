@@ -4,6 +4,13 @@ fn main() {
     process_data(&strings);
 }
 
+/// Processes a slice of strings and returns a new collection.
+/// 
+/// # Arguments
+/// * `data` - A slice of strings to process
+///
+/// # Returns
+/// A vector containing processed strings
 fn process_data(data: &[String]) -> Vec<String> {
     data.iter().map(|s| s.to_string()).collect()
 }
