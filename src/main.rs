@@ -1,10 +1,12 @@
 /// Main entry point for the application.
+use log;
 /// Initializes sample data and processes it.
 fn main() {
     println!("Hello, world!");
     let strings = ["Hello".to_string(), "World".to_string()];
     process_data(&strings);
     process_data_2(&[1, 2, 3, 4, 5]);
+    initialize_logger();
 }
 
 /// Processes a slice of strings and returns a new collection.
@@ -30,3 +32,12 @@ fn process_data_2(data: &[u8]) -> Vec<u8> {
     result
 }
 
+fn initialize_logger() {
+    #[cfg(debug_assertions)]
+    let level = log::LevelFilter::Debug;
+    
+    #[cfg(not(debug_assertions))]
+    let level = log::LevelFilter::Info;
+    
+    // Initialize logger...
+}
