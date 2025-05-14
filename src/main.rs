@@ -1,6 +1,7 @@
 fn main() {
     println!("Hello, world!");
-    process_data(&vec!["Hello".to_string(), "World".to_string()]);
+    let strings = ["Hello".to_string(), "World".to_string()];
+    process_data(&strings);
 }
 
 fn process_data(data: &[String]) -> Vec<String> {
