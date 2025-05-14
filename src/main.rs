@@ -1,3 +1,5 @@
+/// Main entry point for the application.
+/// Initializes sample data and processes it.
 fn main() {
     println!("Hello, world!");
     let strings = ["Hello".to_string(), "World".to_string()];
