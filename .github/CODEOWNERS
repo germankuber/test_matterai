@@ -1,0 +1,4 @@
+# File: .github/CODEOWNERS
+# Require review from @germankuber on every PR
+*    @germankuber
+
